@@ -7,8 +7,15 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
+import Calculadora from '../screens/Calculadora';
+import CaloriasRecomendadas from '../screens/CaloriasRecomendadas';
+import Historial from '../screens/Historial';
+import Menu from '../screens/Menu';
+import MenuControlDiario from '../screens/MenuControlDiario';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
+import NuevoPlato from '../screens/NuevoPlato';
+import TabOneScreen from '../screens/TabOneScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -30,8 +37,14 @@ const Stack = createStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+      <Stack.Screen name="Root" component={TabOneScreen} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Historial" component={Historial}  />
+      <Stack.Screen name="Calculadora" component={Calculadora}  />
+      <Stack.Screen name="Menu" component={Menu}  />
+      <Stack.Screen name="CaloriasRecomendadas" component={CaloriasRecomendadas}  />
+      <Stack.Screen name="MenuControlDiario" component={MenuControlDiario}  />
+      <Stack.Screen name="NuevoPlato" component={NuevoPlato}  />
     </Stack.Navigator>
   );
 }

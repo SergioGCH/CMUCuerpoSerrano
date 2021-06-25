@@ -6,6 +6,12 @@
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
+  Historial: undefined;
+  Calculadora: undefined;
+  Menu: undefined;
+  CaloriasRecomendadas: undefined;
+  MenuControlDiario: undefined;
+  NuevoPlato: undefined;
 };
 
 export type BottomTabParamList = {
